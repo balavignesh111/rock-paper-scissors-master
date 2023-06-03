@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+/* font-family: 'Barlow Semi Condensed', sans-serif; */
+
+:root{
+  --clr-Scissors-Gradient-start: hsl(39, 89%, 49%);
+  --clr-Scissors-Gradient-end: hsl(40, 84%, 53%);
+  --clr-Paper-Gradient-start: hsl(230, 89%, 62%);
+  --clr-Paper-Gradient-end: hsl(230, 89%, 65%);
+  --clr-Rock-Gradient-start: hsl(349, 71%, 52%);
+  --clr-Rock-Gradient-end: hsl(349, 70%, 56%);
+  --clr-Cyan-start: hsl(189, 59%, 53%);
+  --clr-Cyan-end: hsl(189, 58%, 57%);
+
+  /* text color  */
+  --clr-Dark-Text: hsl(229, 25%, 31%);
+  --clr-Score-Text: hsl(229, 64%, 46%);
+  --clr-Header-Outline: hsl(217, 16%, 45%);
+
+  /* background color */
+  --clr-background-start:  hsl(214, 47%, 23%) ; --clr-background-end:  hsl(214, 47%, 23%) ;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+
+body{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  /* background-image: -webkit-radial-gradient(var(--clr-background-start),var(--clr-background-end)); */
+  /* background: -moz-radial-gradient(var(--clr-background-start),var(--clr-background-end)); */
+  background-color: var(--clr-background-end);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
