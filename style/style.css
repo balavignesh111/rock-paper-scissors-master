@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
-/* font-family: 'Barlow Semi Condensed', sans-serif; */
-
 :root{
   --clr-Scissors-Gradient-start: hsl(39, 89%, 49%);
   --clr-Scissors-Gradient-end: hsl(40, 84%, 53%);
@@ -36,7 +34,185 @@ body{
   /* background-image: -webkit-radial-gradient(var(--clr-background-start),var(--clr-background-end)); */
   /* background: -moz-radial-gradient(var(--clr-background-start),var(--clr-background-end)); */
   background-color: var(--clr-background-end);
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.container{
+  width: 50rem;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 6rem;
+  margin: 0 auto;
+}
+
+/* header section starts here!!! */
+.header{
+  width: 40rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  border: 3px solid var(--clr-Header-Outline);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.score-card{
+  width: 8rem;
+  height: auto;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.score-title{
+  text-transform: uppercase;
+  color: var(--clr-Score-Text);
+  letter-spacing: 2px;
+}
+
+.score-value{
+  color: var(--clr-Dark-Text);
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+/* playground sect starts here!!! */
+
+.playground{
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+/* tri image starts here!!! */
+.triangleImage-container{
+  width: 14rem;
+}
+
+.triangle-image{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+/* weapons */
+.weapons{
+  width: 25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  top: -4rem;
+  row-gap: 2rem;
+}
+
+.weaponTools{
+  width: 9rem;
+  height: 9rem;
+  border: 1rem solid;
+  border-radius: 50%;
+}
+
+.paper{
+  border-color: var(--clr-Paper-Gradient-start);
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.scissors{
+  border-color: var(--clr-Scissors-Gradient-start);
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.rock{
+  border-color: var(--clr-Rock-Gradient-start);grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/* rule btn starts here!!! */
+
+.rule{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  margin-top: 4rem;
+}
+
+.rule-btn{
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--clr-background-end);
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.rule-btn:hover{
+  color: var(--clr-Dark-Text);
+  background-color: white;
+}
+
+/* rule-Popup starts here!!! */
+.rule-popup{
+  width: 21rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.header-popup{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.closeBtn-popup{
+  width: 2rem;
+  border-color: white;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center ;
+}
+
+.title-popup{
+  color: var(--clr-Dark-Text);
+}
+
+.ruleImageContainer{
+  width: 15rem;
+  margin: 0rem auto;
+}
+
+.ruleImage{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }

@@ -23,6 +23,45 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
-  
+  <div class="container">
+    <div class="header">
+      <div class="title-image">
+        <img src="./images/logo.svg" alt="title-logo">
+      </div>
+      <div class="score-card">
+        <p class="score-title">score</p>
+        <p class="score-value">12</p>
+      </div>
+    </div>
+    <div class="playground">
+      <div class="triangleImage-container">
+        <img src="./images/bg-triangle.svg" alt="triangle-image" class="triangle-image">
+      </div>
+      <div class="weapons">
+        <button class="weaponTools paper">
+          <img src="images/icon-paper.svg" alt="paper-icon">
+        </button>
+        <button class="weaponTools scissors">
+          <img src="images/icon-scissors.svg" alt="icon-scissors">
+        </button>
+        <button class="weaponTools rock">
+          <img src="images/icon-rock.svg" alt="icon-paper">
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="rule">
+    <button class="rule-btn" id="rule-btn" onclick="openpopup()" >Rules</button>
+  </div>
+  <div class="rule-popup" id="rule-popup">
+    <div class="header-popup">
+      <h2 class="title-popup">RULES</h2>
+      <a href="#" class="closeBtn-popup" id="closeBtn-popup" onclick="closepopup();"><img src="./images/icon-close.svg" alt="icon-close"></a>
+    </div>
+    <div class="ruleImageContainer">
+      <img src="./images/image-rules.svg" alt="rule-Image" class="ruleImage">
+    </div>
+  </div>
+  <script src="./javascript.js"></script>
 </body>
 </html>
