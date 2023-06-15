@@ -30,7 +30,7 @@
       </div>
       <div class="score-card">
         <p class="score-title">score</p>
-        <p class="score-value">12</p>
+        <p class="score-value">0</p>
       </div>
     </div>
     <div class="playground">
@@ -38,18 +38,49 @@
         <img src="./images/bg-triangle.svg" alt="triangle-image" class="triangle-image">
       </div>
       <div class="weapons">
-        <button class="weaponTools paper">
+        <button class="weaponTools paper" 
+        id="paper" value="paper"
+        onclick="result('paper')"
+        >
           <img src="images/icon-paper.svg" alt="paper-icon">
         </button>
-        <button class="weaponTools scissors">
+        <button class="weaponTools scissors"
+        id="scissors" value="scissors"
+        onclick="result('scissors')"
+        >
           <img src="images/icon-scissors.svg" alt="icon-scissors">
         </button>
-        <button class="weaponTools rock">
+        <button class="weaponTools rock"
+        id="rock"
+        value="rock"
+        onclick="result('rock')"
+        >
           <img src="images/icon-rock.svg" alt="icon-paper">
         </button>
       </div>
     </div>
+    <div class="result-container">
+      <div class="choice-result">
+        <h4 class="choice-picked">You Picked</h4>
+        <button class="resultWeaponTools resultWeaponPaper" id="user-choice-btn">
+          <img src="images/icon-paper.svg" alt="paper-icon" id="user-choice-btn-img">
+        </button>
+      </div>
+      <div class="game-result">
+        <h3 class="result-content">YOU LOSE</h3>
+        <button class="play-again">PLAY AGAIN</button>
+      </div>
+      <div class="choice-result">
+        <h4 class="choice-picked">The House Picked</h4>
+        <button class="resultWeaponTools resultWeaponPaper"
+        id="comp-choice-btn"
+        >
+          <img src="./images/icon-paper.svg" alt="icon" id="comp-choice-btn-img">
+        </button>
+      </div>
+    </div>
   </div>
+  
   <div class="rule">
     <button class="rule-btn" id="rule-btn" onclick="openpopup()" >Rules</button>
   </div>

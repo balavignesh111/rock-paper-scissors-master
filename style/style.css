@@ -16,7 +16,8 @@
   --clr-Header-Outline: hsl(217, 16%, 45%);
 
   /* background color */
-  --clr-background-start:  hsl(214, 47%, 23%) ; --clr-background-end:  hsl(214, 47%, 23%) ;
+  --clr-background-start:  hsl(214, 47%, 23%) ;
+  --clr-background-end:  hsl(237, 49%, 15%) ;
 }
 
 *{
@@ -31,9 +32,7 @@ html{
 
 body{
   font-family: 'Barlow Semi Condensed', sans-serif;
-  /* background-image: -webkit-radial-gradient(var(--clr-background-start),var(--clr-background-end)); */
-  /* background: -moz-radial-gradient(var(--clr-background-start),var(--clr-background-end)); */
-  background-color: var(--clr-background-end);
+  background: radial-gradient(circle at top,var(--clr-background-start),var(--clr-background-end));
   min-height: 100vh;
   min-width: 100vw;
 }
@@ -45,7 +44,7 @@ body{
   justify-content: center;
   align-content: center;
   align-items: center;
-  gap: 6rem;
+  gap: 4rem;
   margin: 0 auto;
 }
 
@@ -93,7 +92,8 @@ body{
   justify-content: center;
   align-items: center;
   position: relative;
-
+  margin-top: 2rem;
+  /* display: none; */
 }
 
 /* tri image starts here!!! */
@@ -124,6 +124,7 @@ body{
   height: 9rem;
   border: 1rem solid;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .paper{
@@ -215,4 +216,70 @@ body{
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+/* result container */
+.result-container{
+  width: 50rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  display: none;
+}
+
+/* result weapons tool */
+.resultWeaponTools{
+  width: 11rem;
+  height: 11rem;
+  border: 2rem solid;
+  border-radius: 50%;
+}
+.resultWeaponPaper{
+  border-color: var(--clr-Paper-Gradient-start);
+}
+.resultWeaponRock{
+  border-color: var(--clr-Rock-Gradient-start);
+}
+.resultWeaponScissors{
+  border-color: var(--clr-Scissors-Gradient-start);
+}
+
+.choice-result{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.choice-picked{
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 500;
+}
+
+/* game result content and play-again */
+.game-result{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.result-content{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.play-again{
+  padding: 0.5rem 2.3rem;
+  border: 1px solid white;
+  border-radius: 8px;
+  color: red;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
